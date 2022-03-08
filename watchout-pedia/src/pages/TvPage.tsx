@@ -1,0 +1,36 @@
+import React from "react";
+import Footer from "../compoments/Footer";
+import Header from "../compoments/Header";
+import LatestTvSection from "../features/tv/latest";
+import OnTheAirTvSection from "../features/tv/nowPlaying";
+import styled from "@emotion/styled";
+
+
+const Main = styled.main`
+  max-width: 1200px;
+  margin: 0 auto;
+`;
+
+const Container = styled.div`
+  margin-top: 62px;
+  padding: 24px 0;
+`;
+
+
+const TvPage :React.FC = () => {
+    return (
+        <>
+        <Header />
+            <Main>
+                <Container>
+
+                    <LatestTvSection />
+                    <OnTheAirTvSection />
+                </Container>
+            </Main>
+        <Footer />
+        </>
+    )
+}
+
+export default TvPage
